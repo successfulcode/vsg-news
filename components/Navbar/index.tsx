@@ -7,6 +7,7 @@ function Navbar() {
     {name: 'About', href: '/about'},
     {name: 'News', href: '/news'},
     {name: 'News2', href: '/news2'},
+    {name: 'News3', href: '/news3'},
     {name: 'Home', href: '/home'}
   ];
 
