@@ -1,4 +1,4 @@
-import Article from '@/components/Articles/Article';
+import Article from '@/components/Article';
 import { IArticle } from '@/types/IArticle';
 
 async function page() {
@@ -8,9 +8,9 @@ async function page() {
   const articles = await response.json();
 
   return (
-    <>
-      {articles.map((article: IArticle) => <Article article={article  as IArticle} />)}
-    </>
+    <section className="flex flex-row flex-wrap justify-center gap-1 mt-4">
+      {articles.map((article: IArticle) => <Article article={article  as IArticle} key={article.id} />)}
+    </section>
   )
 }
 
