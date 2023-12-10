@@ -8,8 +8,10 @@ async function page() {
   const articles = await response.json();
 
   return (
-    <section className="flex flex-row flex-wrap justify-center gap-1 mt-4">
-      {articles.map((article: IArticle) => <Article article={article  as IArticle} key={article.id} />)}
+    <section className="flex flex-row flex-wrap justify-center gap-2 my-4 mx-auto">
+      {articles.map((article: IArticle) => 
+        <Article article={article  as IArticle} key={article.id} />
+      )}
     </section>
   )
 }
