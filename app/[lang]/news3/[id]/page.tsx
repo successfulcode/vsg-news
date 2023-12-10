@@ -3,7 +3,7 @@ import ArticleImage from '@/assets/images/ArticleImage.jpeg';
 import Badge from '@/components/shared/Badge';
 import { BadgeType } from '@/types/BadgeType';
 
-async function page({ params }: { params: { id: string } }) {
+async function page({ params }: { params: { id: string }}) {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`, {
     next: { revalidate: 3600 }
   });

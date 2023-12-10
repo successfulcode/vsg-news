@@ -4,7 +4,7 @@ import { BadgeType } from '@/types/BadgeType';
 import { MdOutlineAccessTime } from 'react-icons/md';
 import { CiViewTimeline } from "react-icons/ci";
 
-function DateBadge({children, type}:{children: React.ReactNode, type?: BadgeType}) {
+function DateBadge({ children, type }:{ children: React.ReactNode, type?: BadgeType} ) {
   const getIcon = (iconType?: string) => {
     switch(iconType) {
       case BadgeType.DATE:

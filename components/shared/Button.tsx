@@ -1,6 +1,6 @@
 'use client'
 
-function Button({children, click}:{click: () => void,children: React.ReactNode}) {
+function Button({ children, click }:{ click: () => void,children: React.ReactNode }) {
   return (
     <button
       type="button"

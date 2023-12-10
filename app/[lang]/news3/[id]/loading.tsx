@@ -1,6 +1,6 @@
-import React from 'react'
-
 function loading() {
+
+
   return (
     <div>News id page loading....</div>
   )
