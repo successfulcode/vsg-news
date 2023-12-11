@@ -5,9 +5,11 @@ function loading() {
 
   return (
     <section className="flex flex-row flex-wrap justify-center gap-2 my-4 mx-auto">
-      {loadingItems.map((loadingItems, index:number) => <ArticleSkeleton key={index} />)}
+      {loadingItems.map((loadingItems, index: number) => (
+        <ArticleSkeleton key={index} />
+      ))}
     </section>
-  )
+  );
 }
 
-export default loading
+export default loading;
