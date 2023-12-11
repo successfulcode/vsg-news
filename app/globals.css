@@ -20,10 +20,11 @@
 
 } */
 
-.theme-icon {
-  @apply w-4 h-4 text-gray-800 dark:text-white
+.text-gradient {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #4a90e2, #00d2ff);
 }
-
 /* .them-icon-white {
   filter: invert(100%) sepia(0%) saturate(7496%) hue-rotate(97deg) brightness(112%) contrast(100%);
 } */

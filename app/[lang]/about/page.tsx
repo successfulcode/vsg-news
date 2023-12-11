@@ -1,5 +1,6 @@
 'use client'
 
+import LangSwitcher from "@/components/shared/LangSwitcher";
 import Button from "@/components/shared/Button";
 import ThemeDropdown from "@/components/shared/ThemeDropdown";
 
@@ -16,6 +17,7 @@ export default function page() {
       <div>
         <Button click={setTheme}>Hey button</Button>
         <ThemeDropdown />
+        <LangSwitcher />
       </div>
     </div>
   )
