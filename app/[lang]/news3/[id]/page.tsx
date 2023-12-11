@@ -13,7 +13,7 @@ async function page({ params }: { params: { id: string } }) {
   const article = await response.json();
 
   return (
-    <article className="my-4">
+    <article className="my-8">
       <Image src={ArticleImage} alt="article image" className="mb-6 w-4/6" />
       <div className="text-4xl font-bold mb-1 uppercase">{article?.title}</div>
       <div className="flex flex-wrap gap-2 mb-4">

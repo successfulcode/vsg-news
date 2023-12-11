@@ -2,7 +2,7 @@ function loading() {
   return (
     <div
       role="status"
-      className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center p-4"
+      className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center p-4 mt-4"
     >
       <div className="w-full">
         <div className="flex items-center justify-center w-4/6 h-96 bg-gray-300 rounded dark:bg-gray-700 mb-6">
