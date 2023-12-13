@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{__html: themeScript}}/>
       </head>
-      <body className={`${inter.className} flex flex-col min-h-screen bg-white dark:bg-gray-800 dark:text-white`}>
+      <body className={`${inter.className} flex flex-col min-h-screen bg-gray-100 dark:bg-gray-800 dark:text-white`}>
         <Navbar/>
         <main className="mx-auto w-full max-w-screen-xl grow px-2">
           {children}
