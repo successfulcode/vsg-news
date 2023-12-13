@@ -8,7 +8,11 @@ function Navbar() {
     {name: 'About', href: '/about'},
     {name: 'News', href: '/news'},
     {name: 'Create news', href: '/create-news'},
-    {name: 'Chat', href: '/chat'}
+    {name: 'Chat', href: '/chat'},
+
+    // TODO: Display as a button
+    {name: 'Login', href: '/accounts/login'},
+    {name: 'Sign Up', href: '/accounts/sign-up'}
   ];
 
   return (
