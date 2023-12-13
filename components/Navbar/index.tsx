@@ -6,7 +6,8 @@ import { GiBoomerangSun } from 'react-icons/gi';
 function Navbar() {
   const navLinks = [
     {name: 'About', href: '/about'},
-    {name: 'News', href: '/news'}
+    {name: 'News', href: '/news'},
+    {name: 'Chat', href: '/chat'}
   ];
 
   return (
