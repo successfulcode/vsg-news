@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Button from './shared/Button';
-import { createArticle } from '@/lib/actions';
+import { createArticle, getArticles } from '@/lib/actions';
 
 function Editor() {
   const [value, setValue] = useState('');
@@ -28,6 +28,9 @@ function Editor() {
         <Button type='submit' click={() => createArticle(dummyArcticle)}>Send</Button>
 
         {/* <Button type='submit'>Send</Button> */}
+      </div>
+      <div>
+        <Button click={() => getArticles()}>Get Articles</Button>
       </div>
     </form>
   )

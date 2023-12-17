@@ -1,7 +1,16 @@
 'use server'
 
-import { getAllArticles } from './articles';
+import { getAllArticles, saveArticle } from './articles';
 
 export async function createArticle(article: any) {
-  getAllArticles();
+  // getAllArticles();
+
+  await saveArticle(article);
+}
+
+
+export async function getArticles() {
+  // getAllArticles();
+
+  await getAllArticles();
 }

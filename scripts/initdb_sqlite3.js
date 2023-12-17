@@ -14,15 +14,14 @@ db.run(`
     image TEXT NOT NULL,
     article TEXT NOT NULL,
     creator TEXT NOT NULL,
-    creator_email TEXT NOT NULL,
-    date TEXT NOT NULL
+    creator_email TEXT NOT NULL
   )
 `);
 
 // Insert a sample record (you can omit this if you want)
 db.run(`
   INSERT INTO articles (slug, title, image, article, creator, creator_email, date)
-  VALUES ('sample-slug', 'Sample Title', 'sample.jpg', 'Sample article content', 'John Doe', 'john@example.com', '2023-01-01')
+  VALUES ('sample-slug', 'Sample Title', 'sample.jpg', 'Sample article content', 'John Doe', 'john@example.com')
 `);
 
 // const articles = db.all('SELECT * FROM articles', (err, rows) => {
