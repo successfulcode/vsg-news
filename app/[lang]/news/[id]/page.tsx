@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ArticleImage from '@/assets/images/ArticleImage.jpeg';
 import Badge from '@/components/shared/Badge';
-import { BadgeType } from '@/types/BadgeType';
+import { BadgeType } from '@/types/enums/BadgeType';
 
 async function page({ params }: { params: { id: string } }) {
   const response = await fetch(
