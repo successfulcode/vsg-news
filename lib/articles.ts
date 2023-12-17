@@ -1,18 +1,20 @@
-import { sql } from '@vercel/postgres';
+import { sql, db } from '@vercel/postgres';
 
 export async function getAllArticles() { 
-  const { rows } = await sql`
+  const client = await db.connect();
+  const { rows } = await client.sql`
     SELECT * FROM articles
   `;
 
-  console.log('rows', rows);
+  return rows;
 }
 
-export async function saveArticle(article: any) { 
+export async function saveArticle(article: any) {
   const { rows } = await sql`
-    INSERT INTO articles (slug, title, image, article, creator, creator_email)
-    VALUES (${article.slug}, ${article.title}, ${article.image}, ${article.article}, ${article.creator}, ${article.creator_email});
+    INSERT INTO articles (slug, title, image, content, creator, creator_email, date)
+    VALUES (${article.slug}, ${article.title}, ${article.image}, ${article.content}, ${article.creator}, ${article.creator_email}, ${article.date});
   `;
+
 
   console.log('rows', rows);
 }

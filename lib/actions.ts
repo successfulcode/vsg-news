@@ -12,5 +12,8 @@ export async function createArticle(article: any) {
 export async function getArticles() {
   // getAllArticles();
 
-  await getAllArticles();
+  const articles  = await getAllArticles();
+
+  console.log('articles', articles)
+  return articles;
 }

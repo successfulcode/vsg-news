@@ -12,13 +12,13 @@ function Editor() {
   const onSendArticle = () => console.log('onSendArticle', value);
 
   const dummyArcticle = {
-    slug: 'test slug2',
+    slug: 'test_slug5',
     title: 'test title2',
     image: 'test image2',
-    article: 'test article2',
+    content: 'test article2',
     creator: 'test creator2',
     creator_email: 'test creator_email2',
-    date: 'test date2'
+    date: new Date
   }
 
   return (
