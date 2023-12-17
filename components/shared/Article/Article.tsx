@@ -1,4 +1,4 @@
-import { IArticle } from '@/types/IArticle';
+import { IArticle } from '@/types/interfaces/IArticle';
 import Link from 'next/link';
 import Image from 'next/image';
 import ArticleImage from '@/assets/images/ArticleImage.jpeg';

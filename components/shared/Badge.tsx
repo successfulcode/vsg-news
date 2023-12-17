@@ -1,6 +1,6 @@
 
 
-import { BadgeType } from '@/types/BadgeType';
+import { BadgeType } from '@/types/enums/BadgeType';
 import { MdOutlineAccessTime } from 'react-icons/md';
 import { CiViewTimeline } from "react-icons/ci";
 

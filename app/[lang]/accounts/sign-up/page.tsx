@@ -1,5 +1,7 @@
+import SignUp from '@/components/SignUp';
+
 function page() {
-  return <div>Sign Up -In progresss...</div>;
+  return <SignUp />;
 }
 
 export default page;

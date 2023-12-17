@@ -1,5 +1,5 @@
 import Article from '@/components/shared/Article/Article';
-import { IArticle } from '@/types/IArticle';
+import { IArticle } from '@/types/interfaces/IArticle';
 
 async function page() {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts', {

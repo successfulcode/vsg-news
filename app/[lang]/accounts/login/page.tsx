@@ -1,5 +1,7 @@
+import Login from '@/components/Login';
+
 function page() {
-  return <div>Login - In progresss...</div>;
+  return <Login />;
 }
 
 export default page;
