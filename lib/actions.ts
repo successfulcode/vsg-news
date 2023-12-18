@@ -1,19 +1,50 @@
 'use server'
 
-import { getAllArticles, saveArticle } from './articles';
+import { create, getAll, getBySlug } from '@/db/articles';
+import slugify from 'slugify';
+import xss from 'xss';
 
 export async function createArticle(article: any) {
-  // getAllArticles();
+  try {
+    // TODO: Delete
+    await new Promise((resolve) => setTimeout(resolve, 5000));
 
-  await saveArticle(article);
+    article.slug = slugify(article.title, { lower: true });
+    article.content = xss(article.content);
+    article.date = new Date().toISOString();
+
+    const newArticle = await create(article);
+
+    console.log('articles', newArticle);
+
+    return  newArticle;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }
 
 
 export async function getArticles() {
-  // getAllArticles();
+  try {
+    const articles = await getAll();
 
-  const articles  = await getAllArticles();
+    // console.log('articles', articles);
+    return articles; 
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
 
-  console.log('articles', articles)
-  return articles;
+export async function getArticlesBySlug(slug: string) {
+  try {
+    const article = await getBySlug(slug);
+
+    console.log('articles', article)
+    return article;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
 }
