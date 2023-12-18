@@ -7,9 +7,10 @@ export async function createTable() {
       slug VARCHAR(255) NOT NULL UNIQUE,
       title VARCHAR(255) NOT NULL,
       image VARCHAR(255) NOT NULL,
-      article TEXT NOT NULL,
+      content TEXT NOT NULL,
       creator VARCHAR(255) NOT NULL,
-      creator_email VARCHAR(255) NOT NULL
+      creator_email VARCHAR(255) NOT NULL,
+      date DATE NOT NULL
     );
   `;
 
