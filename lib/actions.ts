@@ -1,13 +1,14 @@
 'use server'
 
 import { create, getAll, getBySlug } from '@/db/articles';
+import { IArticle } from '@/types/interfaces/IArticle';
 import slugify from 'slugify';
 import xss from 'xss';
 
-export async function createArticle(article: any) {
+export async function createArticle(article: IArticle) {
   try {
     // TODO: Delete
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    // await new Promise((resolve) => setTimeout(resolve, 5000));
 
     article.slug = slugify(article.title, { lower: true });
     article.content = xss(article.content);
@@ -27,6 +28,8 @@ export async function createArticle(article: any) {
 
 export async function getArticles() {
   try {
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+
     const articles = await getAll();
 
     // console.log('articles', articles);

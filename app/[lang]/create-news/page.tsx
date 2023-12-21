@@ -1,12 +1,9 @@
-'use client'
-
-import Editor from '@/components/Editor';
+import CreateArticle from '@/components/createNews/CreateArticle';
 
 function page() {
   return (
     <>
-      Create news
-      <Editor />
+     <CreateArticle />
     </>
   );
 }
